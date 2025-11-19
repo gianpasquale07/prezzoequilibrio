@@ -24,8 +24,8 @@ namespace es1_19_11
             int q;
             if (int.TryParse(txb_q.Text, out q) == false) throw new Exception("errore");
 
-            int d = 90 - (4 * q);
-            int o = 10 + (q ^ 3 / 100);
+            int d = 90 - (4 * q); // domanda
+            int o = 10 + (q ^ 3 / 100); // offerta
 
             MessageBox.Show($"la domanda è : d = {d} e l'offerta è : o = {o}");
         }
