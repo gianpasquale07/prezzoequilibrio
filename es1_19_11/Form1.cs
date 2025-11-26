@@ -26,7 +26,7 @@ namespace es1_19_11
 
             //offerta
             double c = double.Parse(txb_c.Text);
-            double d = double.Parse(txb_d.Text);
+            double g = double.Parse(txb_g.Text);
             double f = double.Parse(txb_f.Text);
 
             //resettaggio grafico
@@ -41,6 +41,29 @@ namespace es1_19_11
             domanda.ChartType = SeriesChartType.Line;
             domanda.Color = Color.Red;
             domanda.BorderWidth = 3;
+
+            //liea offerta
+            Series offerta = new Series("Offerta");
+            offerta.ChartType = SeriesChartType.Line;
+            offerta.Color = Color.Blue;
+            offerta.BorderWidth = 3;
+
+            //inserimento delle linee nel grafico
+            chart1.Series.Add(domanda);
+            chart1.Series.Add(offerta);
+
+            // calcoli per q da 0 a 20
+            for (int q = 0; q <= 20; q++)
+            {
+                //domanda
+                double d = a - (b * q);
+
+                //offerta
+                double o = c + (Math.Pow(q, g) / f);
+
+                domanda.Points.AddXY(q, d);
+                offerta.Points.AddXY(q, o);
+            }
         }
     }
 }

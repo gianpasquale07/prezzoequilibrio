@@ -37,7 +37,7 @@
             this.txb_a = new System.Windows.Forms.TextBox();
             this.txb_b = new System.Windows.Forms.TextBox();
             this.btn_calcola = new System.Windows.Forms.Button();
-            this.txb_d = new System.Windows.Forms.TextBox();
+            this.txb_g = new System.Windows.Forms.TextBox();
             this.txb_c = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -99,12 +99,12 @@
             this.btn_calcola.UseVisualStyleBackColor = true;
             this.btn_calcola.Click += new System.EventHandler(this.btn_calcola_Click);
             // 
-            // txb_d
+            // txb_g
             // 
-            this.txb_d.Location = new System.Drawing.Point(82, 227);
-            this.txb_d.Name = "txb_d";
-            this.txb_d.Size = new System.Drawing.Size(134, 20);
-            this.txb_d.TabIndex = 10;
+            this.txb_g.Location = new System.Drawing.Point(82, 227);
+            this.txb_g.Name = "txb_g";
+            this.txb_g.Size = new System.Drawing.Size(134, 20);
+            this.txb_g.TabIndex = 10;
             // 
             // txb_c
             // 
@@ -120,7 +120,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "d";
+            this.label4.Text = "g";
             // 
             // label5
             // 
@@ -138,7 +138,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "o = c + q ^ d  / f";
+            this.label6.Text = "o = c + q ^ g  / f";
             // 
             // txb_f
             // 
@@ -168,7 +168,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(330, 400);
+            this.chart1.Size = new System.Drawing.Size(534, 400);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.txb_f);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txb_d);
+            this.Controls.Add(this.txb_g);
             this.Controls.Add(this.txb_c);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -207,7 +207,7 @@
         private System.Windows.Forms.TextBox txb_a;
         private System.Windows.Forms.TextBox txb_b;
         private System.Windows.Forms.Button btn_calcola;
-        private System.Windows.Forms.TextBox txb_d;
+        private System.Windows.Forms.TextBox txb_g;
         private System.Windows.Forms.TextBox txb_c;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
