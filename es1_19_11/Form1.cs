@@ -64,6 +64,25 @@ namespace es1_19_11
                 domanda.Points.AddXY(q, d);
                 offerta.Points.AddXY(q, o);
             }
+
+            //tabella
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+
+            dataGridView1.Columns.Add("q", "Quantità");
+            dataGridView1.Columns.Add("d", "Domanda");
+            dataGridView1.Columns.Add("o", "Offerta");
+
+            //calcolo valori
+            for (int q = 0; q <= 20; q++)
+            {
+                // domanda
+                double d = a - (b * q);
+                // offerta
+                double o = c + (Math.Pow(q, g) / f);     
+
+                dataGridView1.Rows.Add(q, d.ToString("0.00"), o.ToString("0.00"));
+            }
         }
     }
 }
