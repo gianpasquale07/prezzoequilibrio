@@ -20,6 +20,10 @@ namespace es1_19_11
 
         private void btn_calcola_Click(object sender, EventArgs e)
         {
+            double q_eq = -1;
+            double prezzo_eq = 0;
+            double differenzaMin = double.MaxValue;
+
             //domanda
             double a = double.Parse(txb_a.Text);
             double b = double.Parse(txb_b.Text);
@@ -39,12 +43,16 @@ namespace es1_19_11
             //linea domanda
             Series domanda = new Series("Domanda");
             domanda.ChartType = SeriesChartType.Line;
+            domanda.MarkerStyle = MarkerStyle.Circle;   
+            domanda.MarkerSize = 7;
             domanda.Color = Color.Red;
             domanda.BorderWidth = 3;
 
             //liea offerta
             Series offerta = new Series("Offerta");
             offerta.ChartType = SeriesChartType.Line;
+            offerta.MarkerStyle = MarkerStyle.Circle;   
+            offerta.MarkerSize = 7;
             offerta.Color = Color.Blue;
             offerta.BorderWidth = 3;
 
@@ -63,7 +71,19 @@ namespace es1_19_11
 
                 domanda.Points.AddXY(q, d);
                 offerta.Points.AddXY(q, o);
+
+                double diff = Math.Abs(d - o);
+
+                if (diff < differenzaMin)
+                {
+                    differenzaMin = diff;
+                    q_eq = q;
+                    prezzo_eq = (d + o) / 2;
+                }
             }
+
+            lbl_qe.Text = q_eq.ToString();
+            lbl_pe.Text = prezzo_eq.ToString("0.000");
 
             //tabella
             dataGridView1.Columns.Clear();
