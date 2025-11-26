@@ -19,16 +19,16 @@ namespace es1_19_11
 
         private void btn_calcola_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txb_q.Text)) throw new Exception("errore");
+            //domanda
+            double a = double.Parse(txb_a.Text);
+            double b = double.Parse(txb_b.Text);
 
-            int q;
-            if (int.TryParse(txb_q.Text, out q) == false) throw new Exception("errore");
+            //offerta
+            double c = double.Parse(txb_c.Text);
+            double d = double.Parse(txb_d.Text);
+            double f = double.Parse(txb_f.Text);
 
-            int d = 90 - (4 * q); // domanda
-            int o = 10 + (q ^ 3 / 100); // offerta
 
-            lbl_d.Text = d.ToString();
-            lbl_o.Text = o.ToString();
         }
     }
 }
