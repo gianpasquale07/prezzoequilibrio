@@ -31,6 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txb_q = new System.Windows.Forms.TextBox();
             this.btn_calcola = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_o = new System.Windows.Forms.Label();
+            this.lbl_d = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,11 +63,51 @@
             this.btn_calcola.UseVisualStyleBackColor = true;
             this.btn_calcola.Click += new System.EventHandler(this.btn_calcola_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(394, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "offerta";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(394, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "domanda";
+            // 
+            // lbl_o
+            // 
+            this.lbl_o.AutoSize = true;
+            this.lbl_o.Location = new System.Drawing.Point(454, 121);
+            this.lbl_o.Name = "lbl_o";
+            this.lbl_o.Size = new System.Drawing.Size(25, 13);
+            this.lbl_o.TabIndex = 5;
+            this.lbl_o.Text = "???";
+            // 
+            // lbl_d
+            // 
+            this.lbl_d.AutoSize = true;
+            this.lbl_d.Location = new System.Drawing.Point(454, 79);
+            this.lbl_d.Name = "lbl_d";
+            this.lbl_d.Size = new System.Drawing.Size(25, 13);
+            this.lbl_d.TabIndex = 6;
+            this.lbl_d.Text = "???";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_d);
+            this.Controls.Add(this.lbl_o);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_calcola);
             this.Controls.Add(this.txb_q);
             this.Controls.Add(this.label1);
@@ -79,6 +123,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txb_q;
         private System.Windows.Forms.Button btn_calcola;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_o;
+        private System.Windows.Forms.Label lbl_d;
     }
 }
 

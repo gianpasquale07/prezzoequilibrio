@@ -27,7 +27,8 @@ namespace es1_19_11
             int d = 90 - (4 * q); // domanda
             int o = 10 + (q ^ 3 / 100); // offerta
 
-            MessageBox.Show($"la domanda è : d = {d} e l'offerta è : o = {o}");
+            lbl_d.Text = d.ToString();
+            lbl_o.Text = o.ToString();
         }
     }
 }
